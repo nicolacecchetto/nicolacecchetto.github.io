@@ -12,17 +12,11 @@ html {
 
 body {
     max-width: 1024px;
-    display: grid;
-    grid-template-areas: 
-        'header header'
-        'menu social'
-        'main main'
-        'footer footer';
+    min-width: 600px;
     margin: 0 auto;
 }
 
 header {
-    grid-area: header;
     text-align: center;
 }
 
@@ -30,27 +24,22 @@ header h1 {
     padding: 20px 0;
 }
 
-#menu {
-    grid-area: menu;
+nav {
     padding: 20px;
-}
-
-#social {
-    grid-area: social;
-    padding: 20px;
-    text-align: right;
+    text-align: center;
 }
 
 ul {
     list-style-type: none;
 }
 
-#menu li, #social li {
-    display: inline;
+main {
+    min-height: 600px;
 }
 
-main{
-    grid-area: main;
+nav li {
+    display: inline;
+    margin: 0 1%;
 }
 
 main h2 {
@@ -78,7 +67,6 @@ main>img {
 }
 
 footer {
-    grid-area: footer;
     text-align: center;
     padding: 20px 0;
 }

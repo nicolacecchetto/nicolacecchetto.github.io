@@ -1,19 +1,14 @@
 body {
-    max-width: none;
-    display: grid;
-    grid-template-areas: 'header'
-                         'menu'
-                         'social'
-                         'main'
-                         'footer';
+    min-width: 330px;
 }
 
-#menu, #social {
+nav {
     text-align: center;
     font-size: large;
+    float: none;
 }
 
-#menu li, #social li {
+nav li {
     display: block;
 }
 
