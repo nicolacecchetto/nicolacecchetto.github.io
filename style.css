@@ -1,84 +1,100 @@
 * {
-	padding: 0em;
-	margin: 0em;
-}
-
-html {
-    font-size: 100%;
-    font-family: "Geneva", sans-serif;
-    line-height: 1.4em;
-    margin: auto;
-}
-
-body {
-    max-width: 1024px;
-    display: grid;
-    grid-template-areas: 
-        'header header'
-        'menu social'
-        'main main'
-        'footer footer';
-    margin: 0 auto;
-}
-
-header {
-    grid-area: header;
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  /* Header/logo Title */
+  header h1 {
     text-align: center;
-}
+    color: black;
+    font-size: 4em;
+  }
 
-header h1 {
-    padding: 20px 0;
-}
+  #links{
+    display: flex;
+   
+    justify-content: space-between;
+  }
+  
+  /* Style the top navigation bar */
+  #menu ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    
+    text-align: center;
+  }
+  
+  /* Style the navigation bar links */
+  #menu li {
+    list-style: none;
+    
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    
+  }
+  
+  /* Change color on hover */
+  #menu li:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  #social ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;    
+    text-align: center;
+  }
+  
+  /* Style the navigation bar links */
+  #social li {
+    list-style: none;
+    
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    
+  }
+  
+  /* Main column */
+  main {
+    flex: 100%;
+    background-color: white;
+    padding: 2em;
+  }
 
-#menu {
-    grid-area: menu;
+  main h2, main h3{
+    text-align: center;
+  }
+  
+  #mainSocial{
+    display: flex;
+    justify-content:center;
+  }
+
+  #mainSocial li{
+    text-align: center;
+    list-style: none;
+  }
+
+  /* Footer */
+  footer {
     padding: 20px;
-}
-
-#social {
-    grid-area: social;
-    padding: 20px;
-    text-align: right;
-}
-
-ul {
-    list-style-type: none;
-}
-
-#menu li, #social li {
-    display: inline;
-}
-
-main{
-    grid-area: main;
-}
-
-main h2 {
-    padding: 20px 0;
     text-align: center;
-}
+    background: #ddd;
+  }
 
-main h3 {
-    padding: 20px 20px;
-}
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    #mainSocial, #links, #social ul, #menu ul{   
+      flex-direction: column;
+    }
+  }
 
-main p {
-    padding: 0 20px;
-}
-
-main>img {
-    display: block;
-    margin: 0 auto;
-}
-
-#mainSocial {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-align: center;
-}
-
-footer {
-    grid-area: footer;
-    text-align: center;
-    padding: 20px 0;
-}
