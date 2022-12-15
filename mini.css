@@ -1,0 +1,22 @@
+body {
+    max-width: none;
+    display: grid;
+    grid-template-areas: 'header'
+                         'menu'
+                         'social'
+                         'main'
+                         'footer';
+}
+
+#menu, #social {
+    text-align: center;
+    font-size: large;
+}
+
+#menu li, #social li {
+    display: block;
+}
+
+#mainSocial {
+    grid-template-columns: 1fr;
+}
