@@ -1,18 +1,45 @@
 * {
     box-sizing: border-box;
   }
+
+  :root{
+    --kelly-green: #68C106ff;
+--dogwood-rose: #D80069ff;
+--celadon-green: #118A81ff;
+--deep-jungle-green: #09514Aff;
+--tea-green: #C2D5A1ff;
+--cambridge-blue: #A2CCBBff;
+--barbie-pink: #D92680ff;
+--rosso-corsa: #C90101ff;
+--indigo: #4C006Aff;
+--acid-green: #BFCB02ff;
+
+  }
+
+  @font-face {
+    font-family: "nightofthedrippy";
+    src: url('fonts/vtc nightofthedrippybentcaps.ttf') format('truetype');;
+  }
+
   
   /* Style the body */
   body {
-    font-family: Arial;
-    margin: 0;
+    font-family: "nightofthedrippy",Arial;
+    
+    margin: auto;
+    
+    max-width: 1024px;
+    
   }
-  
+  /*HEADER*/
+ 
   /* Header/logo Title */
   header h1 {
     text-align: center;
-    color: black;
-    font-size: 4em;
+    font-size: 8em;
+    /*text-indent: -999em;*/
+    margin: 0em 0em;
+    
   }
 
   #links{
@@ -26,6 +53,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
+    padding-left: 0;
     
     text-align: center;
   }
@@ -40,17 +68,13 @@
     
   }
   
-  /* Change color on hover */
-  #menu li:hover {
-    background-color: #ddd;
-    color: black;
-  }
   
   #social ul{
     display: flex;
     justify-content: flex-end;
     align-items: stretch;    
     text-align: center;
+    padding-left: 0;
   }
   
   /* Style the navigation bar links */
@@ -62,21 +86,33 @@
     text-decoration: none;
     
   }
-  
+
+  /**/
   /* Main column */
   main {
     flex: 100%;
-    background-color: white;
     padding: 2em;
+    
+    
   }
 
   main h2, main h3{
     text-align: center;
+    margin-top: auto;
+  }
+
+  main h2{
+    font-size: 3em;
+  }
+
+  main h3{
+    font-size: 2em;
   }
   
   #mainSocial{
     display: flex;
     justify-content:center;
+    padding-left: 0;
   }
 
   #mainSocial li{
@@ -84,9 +120,19 @@
     list-style: none;
   }
 
+  #linkmenu{
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: top;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
   /* Footer */
   footer {
-    padding: 20px;
+    
+    padding: 1em;
+    
     text-align: center;
     background: #ddd;
   }
