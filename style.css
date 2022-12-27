@@ -1,72 +1,144 @@
 * {
-	padding: 0em;
-	margin: 0em;
-}
+    box-sizing: border-box;
+  }
 
-html {
-    font-size: 100%;
-    font-family: "Geneva", sans-serif;
-    line-height: 1.4em;
+  :root{
+    --kelly-green: #68C106ff;
+--dogwood-rose: #D80069ff;
+--celadon-green: #118A81ff;
+--deep-jungle-green: #09514Aff;
+--tea-green: #C2D5A1ff;
+--cambridge-blue: #A2CCBBff;
+--barbie-pink: #D92680ff;
+--rosso-corsa: #C90101ff;
+--indigo: #4C006Aff;
+--acid-green: #BFCB02ff;
+
+  }
+
+  @font-face {
+    font-family: "nightofthedrippy";
+    src: url('fonts/vtc nightofthedrippybentcaps.ttf') format('truetype');;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: "nightofthedrippy",Arial;
+    
     margin: auto;
-}
-
-body {
+    
     max-width: 1024px;
-    min-width: 600px;
-    margin: 0 auto;
-}
-
-header {
+    
+  }
+  /*HEADER*/
+ 
+  /* Header/logo Title */
+  header h1 {
     text-align: center;
-}
+    font-size: 8em;
+    /*text-indent: -999em;*/
+    margin: 0em 0em;
+    
+  }
 
-header h1 {
-    padding: 20px 0;
-}
-
-nav {
-    padding: 20px;
+  #links{
+    display: flex;
+   
+    justify-content: space-between;
+  }
+  
+  /* Style the top navigation bar */
+  #menu ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-left: 0;
+    
     text-align: center;
-}
-
-ul {
-    list-style-type: none;
-}
-
-main {
-    min-height: 600px;
-}
-
-nav li {
-    display: inline;
-    margin: 0 1%;
-}
-
-main h2 {
-    padding: 20px 0;
+  }
+  
+  /* Style the navigation bar links */
+  #menu li {
+    list-style: none;
+    
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    
+  }
+  
+  
+  #social ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;    
     text-align: center;
-}
+    padding-left: 0;
+  }
+  
+  /* Style the navigation bar links */
+  #social li {
+    list-style: none;
+    
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    
+  }
 
-main h3 {
-    padding: 20px 20px;
-}
+  /**/
+  /* Main column */
+  main {
+    flex: 100%;
+    padding: 2em;
+    
+    
+  }
 
-main p {
-    padding: 0 20px;
-}
-
-main>img {
-    display: block;
-    margin: 0 auto;
-}
-
-#mainSocial {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  main h2, main h3{
     text-align: center;
-}
+    margin-top: auto;
+  }
 
-footer {
+  main h2{
+    font-size: 3em;
+  }
+
+  main h3{
+    font-size: 2em;
+  }
+  
+  #mainSocial{
+    display: flex;
+    justify-content:center;
+    padding-left: 0;
+  }
+
+  #mainSocial li{
     text-align: center;
-    padding: 20px 0;
-}
+    list-style: none;
+  }
+
+  #linkmenu{
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: top;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  /* Footer */
+  footer {
+    
+    padding: 1em;
+    
+    text-align: center;
+    background: #ddd;
+  }
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    #mainSocial, #links, #social ul, #menu ul{   
+      flex-direction: column;
+    }
+  }
