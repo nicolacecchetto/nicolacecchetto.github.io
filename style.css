@@ -20,7 +20,6 @@
     font-family: "nightofthedrippy";
     src: url('fonts/vtc nightofthedrippybentcaps.ttf') format('truetype');;
   }
-
   
   /* Style the body */
   body {
@@ -143,4 +142,3 @@
       flex-direction: column;
     }
   }
-
