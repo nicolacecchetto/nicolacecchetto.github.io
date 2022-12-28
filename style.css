@@ -1,144 +1,167 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  :root{
-    --kelly-green: #68C106ff;
---dogwood-rose: #D80069ff;
---celadon-green: #118A81ff;
---deep-jungle-green: #09514Aff;
---tea-green: #C2D5A1ff;
---cambridge-blue: #A2CCBBff;
---barbie-pink: #D92680ff;
---rosso-corsa: #C90101ff;
---indigo: #4C006Aff;
---acid-green: #BFCB02ff;
+:root {
+  /*
+  --kelly-green: #68C106ff;
+  --dogwood-rose: #D80069ff;
+  --celadon-green: #118A81ff;
+  --deep-jungle-green: #09514Aff;
+  --tea-green: #C2D5A1ff;
 
-  }
+  --cambridge-blue: #A2CCBBff;
+  --barbie-pink: #D92680ff;
+  --rosso-corsa: #C90101ff;
+  --indigo: #4C006Aff;
+  --acid-green: #BFCB02ff;
+  */
+  --bodyColor: #fff;
+  --textColor: #000;
+  --h1Color: #000;
+  --linksDivColor: rgb(112, 54, 54);
+  --linkBgColor: rgb(87, 55, 55);
+  --linkTextColor: #000;
+  --linkHoverColor: red;
+  --headerBgColor: rgb(82,47,47);
+  --mainBgColor: rgba(82, 47, 47, 0.9);
+  --footerBgColor: #ddd;
+}
 
-  @font-face {
+/*@font-face {
     font-family: "nightofthedrippy";
     src: url('fonts/vtc nightofthedrippybentcaps.ttf') format('truetype');;
-  }
-  
-  /* Style the body */
-  body {
-    font-family: "nightofthedrippy",Arial;
-    
-    margin: auto;
-    
-    max-width: 1024px;
-    
-  }
-  /*HEADER*/
- 
-  /* Header/logo Title */
-  header h1 {
-    text-align: center;
-    font-size: 8em;
-    /*text-indent: -999em;*/
-    margin: 0em 0em;
-    
-  }
+  }*/
 
-  #links{
-    display: flex;
-   
-    justify-content: space-between;
-  }
-  
-  /* Style the top navigation bar */
-  #menu ul{
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding-left: 0;
-    
-    text-align: center;
-  }
-  
-  /* Style the navigation bar links */
-  #menu li {
-    list-style: none;
-    
-    color: black;
-    padding: 1em;
-    text-decoration: none;
-    
-  }
-  
-  
-  #social ul{
-    display: flex;
-    justify-content: flex-end;
-    align-items: stretch;    
-    text-align: center;
-    padding-left: 0;
-  }
-  
-  /* Style the navigation bar links */
-  #social li {
-    list-style: none;
-    
-    color: black;
-    padding: 1em;
-    text-decoration: none;
-    
-  }
+/* Style the body */
+body {
+  font-family: "nightofthedrippy", Arial;
+  margin: auto;
+  max-width: 1024px;
+  background-image: url("");
+  background-color: var(--bodyColor); /*if background image is not found, this will be used*/
+  color: var(--textColor); 
+}
 
-  /**/
-  /* Main column */
-  main {
-    flex: 100%;
-    padding: 2em;
-    
-    
-  }
+a:link, a:visited {
+  background-color: var(--linkBgColor);
+  color: var(--linkTextColor);
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 
-  main h2, main h3{
-    text-align: center;
-    margin-top: auto;
-  }
+a:hover, a:active {
+  background-color: var(--linkHoverColor);
+}
 
-  main h2{
-    font-size: 3em;
-  }
+/*HEADER*/
 
-  main h3{
-    font-size: 2em;
-  }
-  
-  #mainSocial{
-    display: flex;
-    justify-content:center;
-    padding-left: 0;
-  }
+/* Header/logo Title */
 
-  #mainSocial li{
-    text-align: center;
-    list-style: none;
-  }
+header {
+  background-color: var(--headerBgColor);
+}
 
-  #linkmenu{
-    margin-top: 0;
-    margin-bottom: 0;
-    vertical-align: top;
-    font-size: 1em;
-    font-weight: bold;
-  }
+header h1 {
+  background-image: url("images/logo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -999em;
+  text-align: center;
+  font-size: 10em;
+  margin: 0em 0em;
+  color: var(--h1Color);
+}
 
-  /* Footer */
-  footer {
-    
-    padding: 1em;
-    
-    text-align: center;
-    background: #ddd;
-  }
+#links {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--linksDivColor);
+}
 
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+#links ul {
+  display: flex;
+  align-items: stretch;
+  padding-left: 0;
+  text-align: center;
+}
+
+#links li {
+  padding: 1em;
+}
+
+#menu ul {
+  justify-content: flex-start;
+}
+
+#social ul {
+  justify-content: flex-end;
+}
+
+/* Main column */
+main {
+  flex: 100%;
+  padding: 2em;
+  background-color: var(--mainBgColor);
+}
+
+main h2, main h3 {
+  text-align: center;
+  margin: auto;
+}
+
+main h2 {
+  font-size: 3em;
+}
+
+main h3 {
+  font-size: 2em;
+}
+
+#mainSocial {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+#mainSocial li {
+  text-align: center;
+  list-style: none;
+}
+
+#linkmenu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 2px 5px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+/* Footer */
+footer {
+  padding: 1em;
+  text-align: center;
+  background: var(--footerBgColor);
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-    #mainSocial, #links, #social ul, #menu ul{   
-      flex-direction: column;
-    }
+  #mainSocial, #links, #social ul, #menu ul {
+    flex-direction: column;
   }
+}
