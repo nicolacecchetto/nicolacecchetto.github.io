@@ -3,7 +3,7 @@
 }
 
 :root {
-  /*
+  
   --kelly-green: #68C106ff;
   --dogwood-rose: #D80069ff;
   --celadon-green: #118A81ff;
@@ -15,17 +15,57 @@
   --rosso-corsa: #C90101ff;
   --indigo: #4C006Aff;
   --acid-green: #BFCB02ff;
+
+  /* 
+  ==========================
+    PRIMA PALETTE logo2.jpg
+  ==========================
   */
+  
+  /*--bodyColor: #fff;
+  --textColor: #000;
+  --h1Color: #000;
+  --linksDivColor: #09514Aff;
+  --linkBgColor: #118A81ff;
+  --linkTextColor: #000;
+  --linkHoverColor: #D80069ff;
+  --headerBgColor: #68C106ff;
+  --mainBgColor: #C2D5A1ff;
+  --footerBgColor: #68C106ff;*/
+
+  /* 
+  ==========================
+    SECONDA PALETTE logo.jpg
+  ==========================
+  */
+
+  /*--bodyColor: #fff;
+  --textColor: #000;
+  --h1Color: #000;
+  --linksDivColor: #4C006Aff;
+  --linkBgColor: #C90101ff;
+  --linkTextColor: #000;
+  --linkHoverColor: #D80069ff;
+  --headerBgColor: #BFCB02ff;
+  --mainBgColor: #A2CCBBff;
+  --footerBgColor: #BFCB02ff;*/
+
+  /* 
+  ==========================
+    TERZA PALETTE
+  ==========================
+  */
+
   --bodyColor: #fff;
   --textColor: #000;
   --h1Color: #000;
-  --linksDivColor: rgb(112, 54, 54);
-  --linkBgColor: rgb(87, 55, 55);
+  --linksDivColor: #897170;
+  --linkBgColor: #7F4040;
   --linkTextColor: #000;
-  --linkHoverColor: red;
-  --headerBgColor: rgb(82,47,47);
-  --mainBgColor: rgba(82, 47, 47, 0.9);
-  --footerBgColor: #ddd;
+  --linkHoverColor: #7F8954;
+  --headerBgColor: #7F4040;
+  --mainBgColor: #BFA5A4;
+  --footerBgColor: #7F4040;
 }
 
 /*@font-face {
@@ -159,8 +199,8 @@ footer {
   background: var(--footerBgColor);
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
   #mainSocial, #links, #social ul, #menu ul {
     flex-direction: column;
   }
